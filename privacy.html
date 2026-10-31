@@ -10,14 +10,15 @@
   <main>
     <p><a href="index.html">← Astra Home Assistant</a></p>
     <h1>Privacy policy</h1>
-    <p class="lead">Last updated: 31 October 2026</p>
+    <p class="lead">Last updated: 1 November 2026</p>
 
     <p>Astra is a private home assistant used by one household on its own tablet. This policy explains what Astra stores, where, and how to remove it. Astra has no advertising, no analytics or tracking, and never sells or shares data.</p>
 
     <h2>What Astra stores</h2>
     <p>Astra's server runs on Fly.io in Sydney, Australia. On that server Astra stores:</p>
     <ul>
-      <li><strong>Household settings</strong> the household enters: home suburb and address details, time zone, temperature units, playback volume, monthly budget, and household members' names, roles and notes.</li>
+      <li><strong>Household settings</strong> the household enters: playback volume, monthly budget, and household members' names, roles and notes.</li>
+      <li><strong>Approximate home location</strong>: the tablet shares its location with the server so Astra can show local weather and prepare the morning routine. The tablet rounds the position to about 1 km before it is sent (two decimal places of latitude and longitude), so the server never receives or stores an exact position or street address. Astra also stores the tablet's time zone and when the location was last updated. Astra asks Android for approximate location only, never precise or background location, and the tablet checks when the app opens, when it is used again, and every few hours while it is open.</li>
       <li><strong>Reminders and routines</strong> the household creates.</li>
       <li><strong>Usage totals</strong> for running costs: numbers of tokens, conversations, conversation durations and response times. No conversation content is stored.</li>
       <li><strong>Paired devices</strong>: a name and a one-way hash of each tablet's access key.</li>
@@ -42,14 +43,15 @@
 
     <h2>Other services</h2>
     <ul>
-      <li><strong>Weather:</strong> the home or requested location's coordinates are sent to <a href="https://open-meteo.com/">Open-Meteo</a> to get forecasts. Location search uses Open-Meteo's GeoNames-based geocoding.</li>
+      <li><strong>Weather:</strong> the approximate (1 km) home coordinates, or those of a city you ask about, are sent to <a href="https://open-meteo.com/">Open-Meteo</a> to get forecasts. City search uses Open-Meteo's GeoNames-based geocoding.</li>
       <li><strong>Hosting:</strong> <a href="https://fly.io/">Fly.io</a> hosts Astra's server and its storage, with automatic daily volume snapshots kept for a few days.</li>
     </ul>
 
     <h2>Disconnecting and deleting data</h2>
     <ul>
-      <li><strong>Disconnect Google Calendar</strong> with <em>Disconnect</em> on Astra's Calendar page. Astra asks Google to revoke its access and deletes the stored Google authorisation. You can also remove Astra at any time from your Google Account under <a href="https://myaccount.google.com/connections">Third-party apps &amp; services</a>.</li>
+      <li><strong>Disconnect Google Calendar</strong> with <em>Disconnect</em> in Astra's Settings under Google Calendar. Astra asks Google to revoke its access and deletes the stored Google authorisation. You can also remove Astra at any time from your Google Account under <a href="https://myaccount.google.com/connections">Third-party apps &amp; services</a>.</li>
       <li><strong>Household details, reminders and routines</strong> can be edited or deleted in Astra, or by asking Astra.</li>
+      <li><strong>Location:</strong> turn location off for Astra in Android's settings and the tablet stops sharing it; the last saved approximate location stays on the server until it is replaced or removed by the developer on request.</li>
       <li><strong>Everything else</strong>, including usage totals and paired devices, can be removed by the developer on request. Deleted data also disappears from the automatic snapshots once they expire.</li>
     </ul>
 
