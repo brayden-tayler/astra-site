@@ -1,0 +1,11 @@
+:root { color-scheme: dark; }
+body { margin: 0; background: #0d1522; color: #eef4fc; font: 18px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 44rem; margin: 0 auto; padding: 48px 24px 32px; }
+h1 { font-size: 2.2rem; font-weight: 500; margin: 0 0 8px; }
+h2 { font-size: 1.25rem; font-weight: 600; margin: 32px 0 8px; }
+.lead { color: #b9c9dc; }
+a { color: #9fd0ff; }
+code { font-size: .9em; color: #cfe3f7; }
+li { margin: 6px 0; }
+.links { margin-top: 32px; }
+footer { max-width: 44rem; margin: 0 auto; padding: 0 24px 48px; color: #8a9bb0; font-size: .9rem; }

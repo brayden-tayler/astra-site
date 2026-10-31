@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy policy · Astra Home Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <p><a href="index.html">← Astra Home Assistant</a></p>
+    <h1>Privacy policy</h1>
+    <p class="lead">Last updated: 31 October 2026</p>
+
+    <p>Astra is a private home assistant used by one household on its own tablet. This policy explains what Astra stores, where, and how to remove it. Astra has no advertising, no analytics or tracking, and never sells or shares data.</p>
+
+    <h2>What Astra stores</h2>
+    <p>Astra's server runs on Fly.io in Sydney, Australia. On that server Astra stores:</p>
+    <ul>
+      <li><strong>Household settings</strong> the household enters: home suburb and address details, time zone, temperature units, playback volume, monthly budget, and household members' names, roles and notes.</li>
+      <li><strong>Reminders and routines</strong> the household creates.</li>
+      <li><strong>Usage totals</strong> for running costs: numbers of tokens, conversations, conversation durations and response times. No conversation content is stored.</li>
+      <li><strong>Paired devices</strong>: a name and a one-way hash of each tablet's access key.</li>
+      <li><strong>Google authorisation</strong> (only if Google Calendar is connected): the Google refresh token, encrypted with AES-256-GCM. The encryption key is kept separately as a server secret.</li>
+    </ul>
+    <p>The tablet stores its own access key in Android's encrypted secure storage.</p>
+
+    <h2>What Astra does not store</h2>
+    <ul>
+      <li><strong>Voice and conversations.</strong> During a conversation, audio travels directly from the tablet to OpenAI's Realtime API, and spoken replies come back the same way. Astra does not record or keep audio or transcripts. OpenAI processes the audio under its <a href="https://openai.com/policies/row-privacy-policy/">privacy policy</a> and API data usage policies.</li>
+      <li><strong>Calendar events.</strong> Events stay in Google Calendar. Astra reads them from Google when it needs to show or discuss them, keeps only a temporary in-memory cache while its server is running, and never saves copies to disk.</li>
+    </ul>
+
+    <h2>Google user data</h2>
+    <p>When the household connects a Google account, Astra asks for two permissions:</p>
+    <ul>
+      <li><strong>View and edit events on your calendars</strong> (<code>calendar.events</code>): to show events and to create, change or delete events when a household member asks.</li>
+      <li><strong>See the list of your calendars</strong> (<code>calendar.calendarlist.readonly</code>): to know which calendars exist and which ones can be edited.</li>
+    </ul>
+    <p>Google data is used only to provide these calendar features to the household. It is not used for advertising, not sold, not used to train AI models, and not shared with anyone. When a household member asks Astra about their calendar by voice, the relevant event details are passed to the OpenAI conversation so Astra can answer, and are not stored afterwards.</p>
+    <p>Astra's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+    <h2>Other services</h2>
+    <ul>
+      <li><strong>Weather:</strong> the home or requested location's coordinates are sent to <a href="https://open-meteo.com/">Open-Meteo</a> to get forecasts. Location search uses Open-Meteo's GeoNames-based geocoding.</li>
+      <li><strong>Hosting:</strong> <a href="https://fly.io/">Fly.io</a> hosts Astra's server and its storage, with automatic daily volume snapshots kept for a few days.</li>
+    </ul>
+
+    <h2>Disconnecting and deleting data</h2>
+    <ul>
+      <li><strong>Disconnect Google Calendar</strong> with <em>Disconnect</em> on Astra's Calendar page. Astra asks Google to revoke its access and deletes the stored Google authorisation. You can also remove Astra at any time from your Google Account under <a href="https://myaccount.google.com/connections">Third-party apps &amp; services</a>.</li>
+      <li><strong>Household details, reminders and routines</strong> can be edited or deleted in Astra, or by asking Astra.</li>
+      <li><strong>Everything else</strong>, including usage totals and paired devices, can be removed by the developer on request. Deleted data also disappears from the automatic snapshots once they expire.</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>Astra is developed by Brayden Tayler. For privacy questions or deletion requests, contact the developer through <a href="https://github.com/brayden-tayler/astra-site">this site's GitHub repository</a>.</p>
+  </main>
+  <footer>Astra Home Assistant</footer>
+</body>
+</html>
