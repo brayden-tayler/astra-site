@@ -23,6 +23,7 @@
       <li><strong>Usage totals</strong> for running costs: numbers of tokens, conversations, conversation durations and response times. No conversation content is stored.</li>
       <li><strong>Paired devices</strong>: a name and a one-way hash of each tablet's access key.</li>
       <li><strong>Google authorisation</strong> (only if Google Calendar is connected): the Google refresh token, encrypted with AES-256-GCM. The encryption key is kept separately as a server secret.</li>
+      <li><strong>Spotify authorisation</strong> (only if Spotify is connected): the Spotify refresh token, encrypted the same way. Disconnecting Spotify in Astra&rsquo;s Settings deletes it.</li>
     </ul>
     <p>The tablet stores its own access key in Android's encrypted secure storage.</p>
 
@@ -45,6 +46,10 @@
     <ul>
       <li><strong>Weather:</strong> the approximate (1 km) home coordinates, or those of a city you ask about, are sent to <a href="https://open-meteo.com/">Open-Meteo</a> to get forecasts. City search uses Open-Meteo's GeoNames-based geocoding.</li>
       <li><strong>Suburb name:</strong> when the saved home changes, the server sends the same approximate (1 km) coordinates, and nothing else about you or the household, to <a href="https://nominatim.openstreetmap.org/">Nominatim</a>, the free reverse-geocoding service of <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, to find the suburb or town name. Like any web request, it also reaches the service from the server's network address, which is Fly.io's, not the tablet's. Map data &copy; OpenStreetMap contributors (ODbL).</li>
+      <li><strong>Screen design (Anthropic):</strong> when you ask Astra for something to show on screen, the server sends the text of your request, a short note from the conversation, the current date and time, and your home suburb name to <a href="https://www.anthropic.com/">Anthropic</a>, whose Claude model designs the screen. Nothing else about you or the household is sent. Astra does not store the request, and Anthropic handles it under its own privacy policy and API terms.</li>
+      <li><strong>Lyrics (LRCLIB):</strong> to show lyrics, the server sends the song name, artist, album and length to <a href="https://lrclib.net/">LRCLIB</a>, a free lyrics database. Nothing else is sent.</li>
+      <li><strong>Photos and places:</strong> to show a photo, the name of the person, place or landmark you asked about is sent to <a href="https://www.wikipedia.org/">Wikipedia</a>, and the photo is loaded from Wikimedia Commons. To show a place on a map, the place name is sent to Nominatim (OpenStreetMap) and the map pictures are loaded from OpenStreetMap.</li>
+      <li><strong>Music (Spotify):</strong> if you connect Spotify, the server uses your Spotify account to search for songs and to show what you recently played, your playlists and library. What you ask Astra to play is sent to Spotify as a search. Spotify&rsquo;s app on the tablet does the playing, and Astra does not receive your Spotify password. See <a href="https://www.spotify.com/privacy">Spotify&rsquo;s privacy policy</a>.</li>
       <li><strong>Hosting:</strong> <a href="https://fly.io/">Fly.io</a> hosts Astra's server and its storage, with automatic daily volume snapshots kept for a few days.</li>
     </ul>
 
